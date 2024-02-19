@@ -7,17 +7,17 @@ export interface Product {
 export const mockedProducts: Product[] = [
   {
     id: "1",
-    title: "Mössa",
-    price: 149,
+    title: "Vita strumpor",
+    price: 99,
   },
   {
     id: "2",
-    title: "Vantar",
-    price: 149,
+    title: "Gula byxor",
+    price: 999,
   },
   {
     id: "3",
-    title: "Halsduk",
-    price: 249,
+    title: "Svart jacka",
+    price: 1999,
   },
 ];
