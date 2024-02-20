@@ -1,9 +1,17 @@
+import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { mockedProducts } from "../../data/mockedData";
+import ProductModal from "../ProductModal";
 
 function ProductPage() {
   const params = useParams();
   const product = mockedProducts.find((product) => product.id === params.id);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggle = () => {
+    setIsModalOpen(!isModalOpen);
+  };
 
   if (!product) {
     return (
@@ -11,10 +19,9 @@ function ProductPage() {
         <h1>ProductPage</h1>
         {mockedProducts.map((product) => (
           <Link key={product.id} to={"/products/" + product.id}>
-            {product.title}
+            <p onClick={toggle}>{product.title}</p>
           </Link>
         ))}
-        {/* <h1>Den här produkten finns inte...</h1> */}
       </div>
     );
   }
@@ -22,8 +29,16 @@ function ProductPage() {
   return (
     <div>
       <h1>ProductPage</h1>
-      {product.title}
-      {product.price}
+      <p>{product.title}</p>
+      <p>{product.price}</p>
+      <div>
+        {/* <button onClick={toggle}>Open Modal </button> */}
+        <ProductModal
+          isOpen={isModalOpen}
+          toggle={toggle}
+          product={product}
+        ></ProductModal>
+      </div>
     </div>
   );
 }
