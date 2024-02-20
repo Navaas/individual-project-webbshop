@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { mockedProducts } from "../../data/mockedData";
 
 function ProductPage() {
@@ -8,7 +8,13 @@ function ProductPage() {
   if (!product) {
     return (
       <div>
-        <h1>Den här produkten finns inte...</h1>
+        <h1>ProductPage</h1>
+        {mockedProducts.map((product) => (
+          <Link key={product.id} to={"/products/" + product.id}>
+            {product.title}
+          </Link>
+        ))}
+        {/* <h1>Den här produkten finns inte...</h1> */}
       </div>
     );
   }
