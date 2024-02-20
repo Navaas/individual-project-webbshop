@@ -44,7 +44,7 @@ export default function Modal(props: ModalType) {
               <>
                 <h2>{props.product.title}</h2>
                 <p>{props.product.price}</p>
-                <span>{props.image}</span>
+                <img src={props.product.image} alt="testimage" />
                 {/* Add more details here as needed */}
               </>
             )}

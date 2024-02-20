@@ -20,7 +20,6 @@ function ProductPage() {
         {mockedProducts.map((product) => (
           <Link key={product.id} to={"/products/" + product.id}>
             <p onClick={toggle}>{product.title}</p>
-            <span>{product.image}</span>
           </Link>
         ))}
       </div>
@@ -32,6 +31,7 @@ function ProductPage() {
       <h1>ProductPage</h1>
       <p>{product.title}</p>
       <p>{product.price}</p>
+      <img src={product.image} alt="testimage" />
       <div>
         {/* <button onClick={toggle}>Open Modal </button> */}
         <ProductModal
