@@ -1,24 +1,54 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+const HeaderDiv = styled.header`
+  background: grey;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    background: pink;
+  }
+`;
+
+const ButtonWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 20px;
+`;
+
 const Button = styled.button`
   background: black;
   color: white;
   width: 100px;
 `;
-const HeaderDiv = styled.header`
-  background: grey;
+
+const CartIcon = styled.span`
+  font-size: 40px;
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
+`;
+
+const CartWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
 `;
 
 function Header() {
   return (
     <HeaderDiv>
-      <Link to="/">
-        <Button>Hem</Button>
-      </Link>
-      <h1>Hello from Header</h1>
+      <ButtonWrapper>
+        <Link to="/">
+          <Button>Hem</Button>
+        </Link>
+      </ButtonWrapper>
+
+      <CartWrapper>
+        <CartIcon className="material-symbols-outlined">shopping_cart</CartIcon>
+      </CartWrapper>
     </HeaderDiv>
   );
 }
