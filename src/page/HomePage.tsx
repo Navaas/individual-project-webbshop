@@ -9,6 +9,10 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    min-height: 100vh;
+  }
 `;
 
 const BoxContainer = styled.div`
@@ -33,12 +37,17 @@ const Box = styled.div`
   @media (max-width: 768px) {
     width: 150px;
     height: 100px;
+    margin-bottom: 20px;
   }
 `;
 
 const TextWrapper = styled.div`
   display: flex;
   z-index: 1;
+  @media (max-width: 768px) {
+    width: 150px;
+    height: 100px;
+  }
 `;
 
 function Homepage() {
