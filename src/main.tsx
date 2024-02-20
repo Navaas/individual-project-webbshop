@@ -7,14 +7,14 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import App from "./App";
-import Homepage from "./components/page/Homepage";
+import Homepage from "./components/page/HomePage";
 import ProductPage from "./components/page/ProductPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" Component={App}>
       <Route index Component={Homepage} />
-      <Route path="/ProductPage" Component={ProductPage} />
+      <Route path="products/:id" Component={ProductPage} />
       <Route path="*" element={<span>Sidan finns inte...</span>} />
     </Route>
   )

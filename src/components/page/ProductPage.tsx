@@ -8,15 +8,18 @@ function ProductPage() {
   if (!product) {
     return (
       <div>
-        <div>
-          <h1>ProductPage</h1>
-          {mockedProducts.map((product) => (
-            <p>{product.title}</p>
-          ))}
-        </div>
+        <h1>Den här produkten finns inte...</h1>
       </div>
     );
   }
+
+  return (
+    <div>
+      <h1>ProductPage</h1>
+      {product.title}
+      {product.price}
+    </div>
+  );
 }
 
 export default ProductPage;
