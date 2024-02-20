@@ -8,6 +8,7 @@ interface ModalType {
   product?: {
     title: string;
     price: number;
+    image: string;
   };
 }
 
@@ -43,6 +44,7 @@ export default function Modal(props: ModalType) {
               <>
                 <h2>{props.product.title}</h2>
                 <p>{props.product.price}</p>
+                <span>{props.image}</span>
                 {/* Add more details here as needed */}
               </>
             )}

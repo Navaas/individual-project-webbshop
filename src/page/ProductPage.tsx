@@ -20,6 +20,7 @@ function ProductPage() {
         {mockedProducts.map((product) => (
           <Link key={product.id} to={"/products/" + product.id}>
             <p onClick={toggle}>{product.title}</p>
+            <span>{product.image}</span>
           </Link>
         ))}
       </div>
