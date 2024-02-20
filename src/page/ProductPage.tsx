@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { mockedProducts } from "../../data/mockedData";
-import ProductModal from "../ProductModal";
+import ProductModal from "../components/ProductModal";
+import { mockedProducts } from "../data/mockedData";
 
 function ProductPage() {
   const params = useParams();
