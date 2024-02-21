@@ -47,8 +47,8 @@ const ImageWrapper = styled.div`
 const StyledImage = styled.img`
   width: 20%;
   height: 40%;
-  object-fit: cover; /* Anpassa storleken på bilden utan att förvränga den */
-  border-top-left-radius: 999px; /* Runda bara de övre vänstra hörnen */
+  object-fit: cover;
+  border-top-left-radius: 999px;
   border-top-right-radius: 999px;
 `;
 
