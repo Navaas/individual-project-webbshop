@@ -42,13 +42,13 @@ function ProductPage() {
     return (
       <ProductContainer>
         {mockedProducts.map((product) => (
-          <ProductCard>
-            <Link key={product.id} to={"/products/" + product.id}>
+          <Link key={product.id} to={"/products/" + product.id}>
+            <ProductCard>
               <ProductImage src={product.image} alt="productimage" />
               <p>{product.title}</p>
-              <p>{product.price}</p>
-            </Link>
-          </ProductCard>
+              <p>{product.price} :-</p>
+            </ProductCard>
+          </Link>
         ))}
       </ProductContainer>
     );
