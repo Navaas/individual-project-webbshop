@@ -5,6 +5,7 @@ export interface Product {
   title: string;
   price: number;
   image: string;
+  description: string;
 }
 
 export const mockedProducts: Product[] = [
@@ -13,36 +14,48 @@ export const mockedProducts: Product[] = [
     title: "Tulpan lökar",
     price: 99,
     image: test,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ut laboriosam quasi ratione ipsam debitis doloremque labore nulla ipsum voluptas laudantium adipisci, libero temporibus qui ex saepe tempora cupiditate odit!",
   },
   {
     id: "2",
     title: "Astrid Lindgren rosenbuske",
     price: 345,
     image: test,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ut laboriosam quasi ratione ipsam debitis doloremque labore nulla ipsum voluptas laudantium adipisci, libero temporibus qui ex saepe tempora cupiditate odit!",
   },
   {
     id: "3",
     title: "Dalior frön",
     price: 99,
     image: test,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ut laboriosam quasi ratione ipsam debitis doloremque labore nulla ipsum voluptas laudantium adipisci, libero temporibus qui ex saepe tempora cupiditate odit!",
   },
   {
     id: "1",
     title: "Tulpan lökar",
     price: 99,
     image: test,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ut laboriosam quasi ratione ipsam debitis doloremque labore nulla ipsum voluptas laudantium adipisci, libero temporibus qui ex saepe tempora cupiditate odit!",
   },
   {
     id: "2",
     title: "Astrid Lindgren rosenbuske",
     price: 345,
     image: test,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ut laboriosam quasi ratione ipsam debitis doloremque labore nulla ipsum voluptas laudantium adipisci, libero temporibus qui ex saepe tempora cupiditate odit!",
   },
   {
     id: "3",
     title: "Dalior frön",
     price: 99,
     image: test,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ut laboriosam quasi ratione ipsam debitis doloremque labore nulla ipsum voluptas laudantium adipisci, libero temporibus qui ex saepe tempora cupiditate odit!",
   },
 
   {
@@ -50,23 +63,31 @@ export const mockedProducts: Product[] = [
     title: "Dalior frön",
     price: 99,
     image: test,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ut laboriosam quasi ratione ipsam debitis doloremque labore nulla ipsum voluptas laudantium adipisci, libero temporibus qui ex saepe tempora cupiditate odit!",
   },
   {
     id: "1",
     title: "Tulpan lökar",
     price: 99,
     image: test,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ut laboriosam quasi ratione ipsam debitis doloremque labore nulla ipsum voluptas laudantium adipisci, libero temporibus qui ex saepe tempora cupiditate odit!",
   },
   {
     id: "2",
     title: "Astrid Lindgren rosenbuske",
     price: 345,
     image: test,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ut laboriosam quasi ratione ipsam debitis doloremque labore nulla ipsum voluptas laudantium adipisci, libero temporibus qui ex saepe tempora cupiditate odit!",
   },
   {
     id: "3",
     title: "Dalior frön",
     price: 99,
     image: test,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur ut laboriosam quasi ratione ipsam debitis doloremque labore nulla ipsum voluptas laudantium adipisci, libero temporibus qui ex saepe tempora cupiditate odit!",
   },
 ];
