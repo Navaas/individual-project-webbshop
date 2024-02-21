@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const FooterContainer = styled.div`
-  position: fixed;
   background: black;
   color: white;
   bottom: 0;
