@@ -1,5 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
+import LikeButton from "../components/LikeButton";
 import { mockedProducts } from "../data/mockedData";
 
 const ProductContainer = styled.div`
@@ -42,13 +43,14 @@ function ProductPage() {
     return (
       <ProductContainer>
         {mockedProducts.map((product) => (
-          <Link key={product.id} to={"/products/" + product.id}>
-            <ProductCard>
+          <ProductCard>
+            <Link key={product.id} to={"/products/" + product.id}>
               <ProductImage src={product.image} alt="productimage" />
               <p>{product.title}</p>
               <p>{product.price} :-</p>
-            </ProductCard>
-          </Link>
+            </Link>
+            <LikeButton />
+          </ProductCard>
         ))}
       </ProductContainer>
     );
