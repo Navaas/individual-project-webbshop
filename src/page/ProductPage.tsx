@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import ProductModal from "../components/ProductModal";
 import { mockedProducts } from "../data/mockedData";
 
 function ProductPage() {
@@ -32,14 +31,6 @@ function ProductPage() {
       <p>{product.title}</p>
       <p>{product.price}</p>
       <img src={product.image} alt="testimage" />
-      <div>
-        {/* <button onClick={toggle}>Open Modal </button> */}
-        <ProductModal
-          isOpen={isModalOpen}
-          toggle={toggle}
-          product={product}
-        ></ProductModal>
-      </div>
     </div>
   );
 }
