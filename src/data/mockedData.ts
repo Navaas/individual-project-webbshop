@@ -10,20 +10,20 @@ export interface Product {
 export const mockedProducts: Product[] = [
   {
     id: "1",
-    title: "Vita strumpor",
+    title: "Tulpan lökar",
     price: 99,
     image: test,
   },
   {
     id: "2",
-    title: "Gula byxor",
-    price: 999,
+    title: "Astrid Lindgren rosenbuske",
+    price: 345,
     image: test,
   },
   {
     id: "3",
-    title: "Svart jacka",
-    price: 1999,
+    title: "Dalior frön",
+    price: 99,
     image: test,
   },
 ];
