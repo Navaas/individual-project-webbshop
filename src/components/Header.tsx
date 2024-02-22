@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import Cart from "./Cart";
 
 const HeaderDiv = styled.header`
   background: grey;
@@ -38,6 +40,12 @@ const CartWrapper = styled.div`
 `;
 
 function Header() {
+  const [cartOpen, setCartOpen] = useState(false);
+
+  const toogle = () => {
+    setCartOpen(!cartOpen);
+  };
+
   return (
     <HeaderDiv>
       <ButtonWrapper>
@@ -47,7 +55,11 @@ function Header() {
       </ButtonWrapper>
 
       <CartWrapper>
-        <CartIcon className="material-symbols-outlined">shopping_cart</CartIcon>
+        <Cart isOpen={cartOpen} toggle={toogle} />{" "}
+        {/* Lägg till Cart-komponenten här */}
+        <CartIcon onClick={toogle} className="material-symbols-outlined">
+          shopping_cart
+        </CartIcon>
       </CartWrapper>
     </HeaderDiv>
   );
