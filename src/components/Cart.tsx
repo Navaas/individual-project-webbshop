@@ -19,7 +19,6 @@ interface Product {
 }
 
 const Overlay = styled.div<{ isOpen: boolean }>`
-  // Behåll isOpen här
   position: fixed;
   top: 0;
   left: 0;
@@ -36,9 +35,11 @@ const CartContainer = styled.div<CartContainerProps>`
   position: fixed;
   top: 0;
   right: ${({ isOpen }) => (isOpen ? "0" : "-350px")};
-  background: black;
+  background: white;
   width: 350px;
-  height: 100vh;
+  height: 93vh;
+  border-radius: 10px;
+  margin-top: 30px;
   transition: right 0.3s ease-in-out;
   z-index: 999;
   color: white;
@@ -50,7 +51,7 @@ const CartContent = styled.div`
   align-items: center;
   justify-content: center;
   height: 100%;
-  color: white;
+  color: black;
 `;
 
 const Title = styled.li`
