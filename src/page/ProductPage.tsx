@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 import LikeButton from "../components/LikeButton";
+import ProductView from "../components/ProductView";
 import { mockedProducts } from "../data/mockedData";
 
 const ProductContainer = styled.div`
@@ -35,24 +36,6 @@ const ProductImage = styled.img`
   height: 60%;
 `;
 
-const Product = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
-`;
-
-const SingleProduct = styled.div`
-  border: solid black 1px;
-  text-align: center;
-  height: 70%;
-  width: 20%;
-`;
-
-const SingleProductImage = styled.img`
-  height: 50%;
-`;
-
 function ProductPage() {
   const params = useParams();
   const product = mockedProducts.find((product) => product.id === params.id);
@@ -74,14 +57,9 @@ function ProductPage() {
     );
   }
   return (
-    <Product>
-      <SingleProduct>
-        <SingleProductImage src={product.image} alt="testimage" />
-        <p>{product.title}</p>
-        <p>{product.price}</p>
-        <p>{product.description}</p>
-      </SingleProduct>
-    </Product>
+    <div>
+      <ProductView product={product}></ProductView>
+    </div>
   );
 }
 
