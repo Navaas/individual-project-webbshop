@@ -1,8 +1,9 @@
+import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 import LikeButton from "../components/LikeButton";
 import ProductView from "../components/ProductView";
-import { mockedProducts } from "../data/mockedData";
+import { Product, mockedProducts } from "../data/mockedData";
 
 const ProductContainer = styled.div`
   display: grid;
@@ -38,22 +39,41 @@ const ProductImage = styled.img`
 
 function ProductPage() {
   const params = useParams();
-  const product = mockedProducts.find((product) => product.id === params.id);
+  const product = mockedProducts.find((product) => product.id === params.id) as
+    | Product
+    | undefined;
+
+  const [cart, setCart] = useState<Product[]>([]);
+  const [isCartOpen, setIsCartOpen] = useState(false); // Lägg till en state för att hantera varukorgens öppenhetsstatus
+
+  const toggleCart = () => {
+    setIsCartOpen(!isCartOpen);
+  };
+
+  const addToCart = (product: Product) => {
+    console.log("Cart before adding product:", cart);
+    setCart([...cart, product]);
+    console.log("Cart after adding product:", cart);
+  };
 
   if (!product) {
     return (
-      <ProductContainer>
-        {mockedProducts.map((product) => (
-          <ProductCard>
-            <Link key={product.id} to={"/products/" + product.id}>
-              <ProductImage src={product.image} alt="productimage" />
-              <p>{product.title}</p>
-              <p>{product.price} :-</p>
-            </Link>
-            <LikeButton />
-          </ProductCard>
-        ))}
-      </ProductContainer>
+      <>
+        <ProductContainer>
+          {mockedProducts.map((product) => (
+            <ProductCard key={product.id}>
+              <Link to={"/products/" + product.id}>
+                <ProductImage src={product.image} alt="productimage" />
+                <p>{product.title}</p>
+                <p>{product.price} :-</p>
+              </Link>
+              <LikeButton />
+              <button onClick={() => addToCart(product)}>Köp</button>
+            </ProductCard>
+          ))}
+        </ProductContainer>
+        {/* <Cart isOpen={isCartOpen} toggle={toggleCart} cart={cart} /> */}
+      </>
     );
   }
   return (

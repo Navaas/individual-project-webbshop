@@ -3,13 +3,23 @@ import styled from "styled-components";
 interface CartProps {
   isOpen: boolean;
   toggle: () => void;
+  cart: any[];
 }
 
 interface CartContainerProps {
   isOpen: boolean;
 }
 
+interface Product {
+  id: string;
+  title: string;
+  price: number;
+  image: string;
+  description: string;
+}
+
 const Overlay = styled.div<{ isOpen: boolean }>`
+  // Behåll isOpen här
   position: fixed;
   top: 0;
   left: 0;
@@ -19,7 +29,7 @@ const Overlay = styled.div<{ isOpen: boolean }>`
   z-index: 998;
   transition: opacity 0.3s ease-in-out;
   pointer-events: ${({ isOpen }) => (isOpen ? "auto" : "none")};
-  cursor: default; /* eller cursor: pointer; beroende på ditt behov */
+  cursor: default;
 `;
 
 const CartContainer = styled.div<CartContainerProps>`
@@ -40,17 +50,29 @@ const CartContent = styled.div`
   align-items: center;
   justify-content: center;
   height: 100%;
+  color: white;
 `;
 
-function Cart({ isOpen, toggle }: CartProps) {
+const Title = styled.li`
+  color: white;
+`;
+
+function Cart({ isOpen, toggle, cart }: CartProps) {
+  console.log("Cart in Cart component:", cart);
   return (
     <>
       <Overlay isOpen={isOpen} onClick={toggle} />
       <CartContainer isOpen={isOpen}>
         <CartContent>
-          {/* Innehåll för varukorgen */}
           <h1>Cart</h1>
-          {/* Eventuellt innehåll för varukorgen */}
+          <ul>
+            {cart &&
+              cart.map((Product, index) => (
+                <Title key={Product.index}>
+                  {Product.title} {Product.price}
+                </Title>
+              ))}
+          </ul>
         </CartContent>
       </CartContainer>
     </>

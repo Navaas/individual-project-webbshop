@@ -55,7 +55,7 @@ function Header() {
       </ButtonWrapper>
 
       <CartWrapper>
-        <Cart isOpen={cartOpen} toggle={toogle} />{" "}
+        <Cart isOpen={cartOpen} toggle={toogle} cart={[]} />
         {/* Lägg till Cart-komponenten här */}
         <CartIcon onClick={toogle} className="material-symbols-outlined">
           shopping_cart
