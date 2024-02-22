@@ -44,11 +44,11 @@ function ProductPage() {
     | undefined;
 
   const [cart, setCart] = useState<Product[]>([]);
-  const [isCartOpen, setIsCartOpen] = useState(false); // Lägg till en state för att hantera varukorgens öppenhetsstatus
+  // const [isCartOpen, setIsCartOpen] = useState(false); // Lägg till en state för att hantera varukorgens öppenhetsstatus
 
-  const toggleCart = () => {
-    setIsCartOpen(!isCartOpen);
-  };
+  // const toggleCart = () => {
+  //   setIsCartOpen(!isCartOpen);
+  // };
 
   const addToCart = (product: Product) => {
     console.log("Cart before adding product:", cart);

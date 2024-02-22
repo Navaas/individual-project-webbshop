@@ -1,92 +1,134 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import background from "../image/background1.jpeg";
-import image from "../image/start.jpg";
+import image1 from "../image/image.png";
 
 const Container = styled.div`
+  background: #f1edea;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
+  height: 120vh;
 `;
 
 const TextContainer = styled.div`
-  background-image: url(${background});
-  background-size: cover;
-  background-position: center;
-  flex-direction: column;
-  color: black;
-  align-items: center;
-  border: black solid 1px;
-  flex: 1;
-  width: 100%;
-`;
-
-const TextWrapper = styled.div`
-  background: white;
-  color: black;
-`;
-
-const ButtonContainer = styled.div`
-  color: white;
-  align-items: center;
   flex-direction: row;
-  border: red solid 1px;
-  flex: 1;
-  width: 100%;
+  color: black;
+  text-align: center;
+  margin-top: 50px;
+  width: 50%;
   display: flex;
+  align-items: center;
   justify-content: center;
 `;
 
-const ImageWrapper = styled.div`
-  width: 300px;
-  height: 200px;
+const Text = styled.div`
+  /* border: solid 1px black; */
+  width: 100%;
+`;
+
+const Image = styled.div`
+  /* border: solid 1px red; */
+  width: 100%;
 `;
 
 const StyledImage = styled.img`
-  width: 20%;
-  height: 40%;
-  object-fit: cover;
+  width: 50%;
   border-top-left-radius: 999px;
   border-top-right-radius: 999px;
+`;
+
+const StyledImageHomeSide = styled.img`
+  width: 80%;
+  border-top-left-radius: 999px;
+  border-top-right-radius: 999px;
+  background: #f1edea;
+`;
+
+const ProductButton = styled.button`
+  width: 150px;
+  padding: 10px;
+  text-transform: uppercase;
+`;
+
+const ImageContainer = styled.div`
+  flex-direction: row;
+  color: black;
+  text-align: center;
+  border-top: black solid 1px;
+  margin-top: 100px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const ProductImage = styled.div`
+  margin-top: 50px;
 `;
 
 function Homepage() {
   return (
     <Container>
       <TextContainer>
-        <h1>HomePage</h1>
-        <TextWrapper>
+        <Text>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta id,
-            ab illo dicta cumque ipsa unde culpa quae mollitia dolorum error
-            eius excepturi dolorem, iusto libero quaerat praesentium illum? At.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
-            iste eaque deserunt neque obcaecati aliquam ea dolores non optio
-            recusandae unde fugit ullam quaerat nulla placeat in, amet, quod
-            veniam.
+            "Vi älskar affischer! Upptäck vårt noggrant utvalda sortiment av
+            fantastiska tryck, var och en handplockad för att lägga till en
+            touch av konstnärlighet och stil i ditt utrymme. Från fängslande
+            landskap till tankeväckande designer, hitta den perfekta affischen
+            för att uttrycka din unika personlighet och lyfta din heminredning."
           </p>
-        </TextWrapper>
-      </TextContainer>
-      <ButtonContainer>
-        <ImageWrapper>
-          <StyledImage src={image} alt="My Image" />
-          <StyledImage src={image} alt="My Image" />
-          <StyledImage src={image} alt="My Image" />
           <div>
-            <Link to="productPage">
-              <button>Till produkter</button>
-            </Link>
-            <Link to="productPage">
-              <button>Till produkter</button>
-            </Link>
-            <Link to="productPage">
-              <button>Till produkter</button>
+            <ProductButton>Shoppa nu</ProductButton>
+          </div>
+        </Text>
+        <Image>
+          <StyledImageHomeSide src={image1} alt="" />
+        </Image>
+      </TextContainer>
+
+      <ImageContainer>
+        <ProductImage>
+          <p>
+            <StyledImage
+              src="https://images.desenio.com/zoom/2562_2-23931.jpg?_gl=1*4esxnv*_ga*ODY4MDk3NTgwLjE3MDg2MDY1NDE.*_ga_GH3FS7X5TH*MTcwODYwNjU0MS4xLjEuMTcwODYwODM1My4wLjAuMA.."
+              alt="My Image"
+            />
+          </p>
+          <div>
+            <Link to={"/ProductPage"}>
+              <ProductButton>Shoppa nu</ProductButton>
             </Link>
           </div>
-        </ImageWrapper>
-      </ButtonContainer>
+        </ProductImage>
+        <ProductImage>
+          <p>
+            <StyledImage
+              src="https://images.desenio.com/zoom/2562_2-23931.jpg?_gl=1*4esxnv*_ga*ODY4MDk3NTgwLjE3MDg2MDY1NDE.*_ga_GH3FS7X5TH*MTcwODYwNjU0MS4xLjEuMTcwODYwODM1My4wLjAuMA.."
+              alt="My Image"
+            />
+          </p>
+          <div>
+            <Link to={"/ProductPage"}>
+              <ProductButton>Shoppa nu</ProductButton>
+            </Link>
+          </div>
+        </ProductImage>
+        <ProductImage>
+          <p>
+            <StyledImage
+              src="https://images.desenio.com/zoom/2562_2-23931.jpg?_gl=1*4esxnv*_ga*ODY4MDk3NTgwLjE3MDg2MDY1NDE.*_ga_GH3FS7X5TH*MTcwODYwNjU0MS4xLjEuMTcwODYwODM1My4wLjAuMA.."
+              alt="My Image"
+            />
+          </p>
+          <div>
+            <Link to={"/ProductPage"}>
+              <ProductButton>Shoppa nu</ProductButton>
+            </Link>
+          </div>
+        </ProductImage>
+      </ImageContainer>
     </Container>
   );
 }
