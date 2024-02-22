@@ -5,12 +5,20 @@ import LikeButton from "../components/LikeButton";
 import ProductView from "../components/ProductView";
 import { Product, mockedProducts } from "../data/mockedData";
 
+const Container = styled.div`
+  background: #f1edea;
+  display: flex;
+  justify-content: center;
+`;
+
 const ProductContainer = styled.div`
+  padding: 20px;
+  background: white;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
   max-width: 1000px;
   margin: 0 auto; /* Centrera behållaren på sidan */
   @media (max-width: 768px) {
@@ -27,14 +35,34 @@ const ProductContainer = styled.div`
 `;
 
 const ProductCard = styled.div`
-  border: black solid 1px;
+  border: lightgrey solid 1px;
+  border-radius: 10px;
   width: 25vh;
-  height: 30vh;
+  height: 32vh;
   text-align: center;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 `;
 
 const ProductImage = styled.img`
+  padding: 10px;
   height: 60%;
+`;
+
+const LikeAndBuyButtonContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+`;
+
+const BuyButton = styled.button`
+  width: 100px;
+  background: black;
+  color: white;
+`;
+
+const TitleAndPrice = styled.p`
+  margin: 0;
 `;
 
 function ProductPage() {
@@ -58,22 +86,24 @@ function ProductPage() {
 
   if (!product) {
     return (
-      <>
+      <Container>
         <ProductContainer>
           {mockedProducts.map((product) => (
             <ProductCard key={product.id}>
               <Link to={"/products/" + product.id}>
                 <ProductImage src={product.image} alt="productimage" />
-                <p>{product.title}</p>
-                <p>{product.price} :-</p>
+                <TitleAndPrice>{product.title}</TitleAndPrice>
+                <TitleAndPrice>{product.price} :-</TitleAndPrice>
               </Link>
-              <LikeButton />
-              <button onClick={() => addToCart(product)}>Köp</button>
+              <LikeAndBuyButtonContainer>
+                <LikeButton />
+                <BuyButton onClick={() => addToCart(product)}>Köp</BuyButton>
+              </LikeAndBuyButtonContainer>
             </ProductCard>
           ))}
+          {/* <Cart isOpen={isCartOpen} toggle={toggleCart} cart={cart} /> */}
         </ProductContainer>
-        {/* <Cart isOpen={isCartOpen} toggle={toggleCart} cart={cart} /> */}
-      </>
+      </Container>
     );
   }
   return (
