@@ -100,18 +100,6 @@ const ProductImage = styled.div`
   }
 `;
 
-// @media (max-width: 768px) {
-//   grid-template-columns: repeat(2, 1fr);
-//   justify-items: center;
-// }
-
-// @media (max-width: 480px) {
-//   grid-template-columns: repeat(
-//     1,
-//     1fr
-//   ); /* Vid mycket små skärmar, en kolumn */
-// }
-
 function Homepage() {
   return (
     <Container>
@@ -135,12 +123,12 @@ function Homepage() {
 
       <ImageContainer>
         <ProductImage>
-          <span>
+          <p>
             <StyledImage
               src="https://images.desenio.com/zoom/2562_2-23931.jpg?_gl=1*4esxnv*_ga*ODY4MDk3NTgwLjE3MDg2MDY1NDE.*_ga_GH3FS7X5TH*MTcwODYwNjU0MS4xLjEuMTcwODYwODM1My4wLjAuMA.."
               alt="My Image"
             />
-          </span>
+          </p>
           <div>
             <Link to={"/ProductPage"}>
               <ProductButton>Shoppa nu</ProductButton>

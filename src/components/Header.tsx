@@ -4,13 +4,9 @@ import styled from "styled-components";
 import Cart from "./Cart";
 
 const HeaderDiv = styled.header`
-  background: grey;
+  background: #ede4dd;
   display: flex;
   justify-content: space-between;
-
-  @media (max-width: 768px) {
-    background: pink;
-  }
 `;
 
 const ButtonWrapper = styled.div`
