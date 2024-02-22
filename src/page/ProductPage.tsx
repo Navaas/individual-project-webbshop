@@ -9,10 +9,12 @@ const Container = styled.div`
   background: #f1edea;
   display: flex;
   justify-content: center;
+  padding: 30px;
 `;
 
 const ProductContainer = styled.div`
-  padding: 20px;
+  border-radius: 10px;
+  padding: 50px;
   background: white;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -38,9 +40,13 @@ const ProductCard = styled.div`
   border: lightgrey solid 1px;
   border-radius: 10px;
   width: 25vh;
-  height: 32vh;
+  height: 35vh;
   text-align: center;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  @media (max-width: 480px) {
+    width: 35vh;
+    height: 40vh;
+  }
 `;
 
 const ProductImage = styled.img`
@@ -51,14 +57,19 @@ const ProductImage = styled.img`
 const LikeAndBuyButtonContainer = styled.div`
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   padding: 10px;
 `;
 
 const BuyButton = styled.button`
   width: 100px;
-  background: black;
-  color: white;
+  background: #f1edea;
+  color: black;
+  border: 1px solid grey;
+  border-radius: 5px;
+  &:hover {
+    background-color: lightgrey;
+  }
 `;
 
 const TitleAndPrice = styled.p`
