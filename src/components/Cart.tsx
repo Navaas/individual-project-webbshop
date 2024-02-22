@@ -19,6 +19,7 @@ const Overlay = styled.div<{ isOpen: boolean }>`
   z-index: 998;
   transition: opacity 0.3s ease-in-out;
   pointer-events: ${({ isOpen }) => (isOpen ? "auto" : "none")};
+  cursor: default; /* eller cursor: pointer; beroende på ditt behov */
 `;
 
 const CartContainer = styled.div<CartContainerProps>`
@@ -30,6 +31,7 @@ const CartContainer = styled.div<CartContainerProps>`
   height: 100vh;
   transition: right 0.3s ease-in-out;
   z-index: 999;
+  color: white;
 `;
 
 const CartContent = styled.div`
