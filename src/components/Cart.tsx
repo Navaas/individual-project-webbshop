@@ -3,7 +3,7 @@ import styled from "styled-components";
 interface CartProps {
   isOpen: boolean;
   toggle: () => void;
-  cart: any[];
+  cart: Product[];
 }
 
 interface CartContainerProps {
@@ -59,7 +59,6 @@ const Title = styled.li`
 `;
 
 function Cart({ isOpen, toggle, cart }: CartProps) {
-  console.log("Cart in Cart component:", cart);
   return (
     <>
       <Overlay isOpen={isOpen} onClick={toggle} />
@@ -68,9 +67,9 @@ function Cart({ isOpen, toggle, cart }: CartProps) {
           <h1>Cart</h1>
           <ul>
             {cart &&
-              cart.map((Product, index) => (
-                <Title key={Product.index}>
-                  {Product.title} {Product.price}
+              cart.map((product, index) => (
+                <Title key={product.id}>
+                  {product.title} {product.price}
                 </Title>
               ))}
           </ul>

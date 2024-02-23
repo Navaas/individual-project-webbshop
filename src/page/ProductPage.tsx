@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Dispatch, SetStateAction } from "react";
+import { Link, useOutletContext, useParams } from "react-router-dom";
 import styled from "styled-components";
 import LikeButton from "../components/LikeButton";
 import ProductView from "../components/ProductView";
@@ -82,17 +82,10 @@ function ProductPage() {
     | Product
     | undefined;
 
-  const [cart, setCart] = useState<Product[]>([]);
-  // const [isCartOpen, setIsCartOpen] = useState(false); // Lägg till en state för att hantera varukorgens öppenhetsstatus
-
-  // const toggleCart = () => {
-  //   setIsCartOpen(!isCartOpen);
-  // };
+  const setCart = useOutletContext<Dispatch<SetStateAction<Product[]>>>();
 
   const addToCart = (product: Product) => {
-    console.log("Cart before adding product:", cart);
-    setCart([...cart, product]);
-    console.log("Cart after adding product:", cart);
+    setCart((cart) => [...cart, product]);
   };
 
   if (!product) {
@@ -112,7 +105,6 @@ function ProductPage() {
               </LikeAndBuyButtonContainer>
             </ProductCard>
           ))}
-          {/* <Cart isOpen={isCartOpen} toggle={toggleCart} cart={cart} /> */}
         </ProductContainer>
       </Container>
     );
