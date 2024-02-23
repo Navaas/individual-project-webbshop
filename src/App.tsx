@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div>
-      <Header />
+      <Header cart={cart} />
       <main>
         <Outlet context={setCart} />
       </main>

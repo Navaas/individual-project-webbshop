@@ -1,7 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { Product } from "../data/mockedData";
 import Cart from "./Cart";
+
+interface CartProps {
+  cart: Product[];
+}
 
 const HeaderDiv = styled.header`
   background: #ede4dd;
@@ -35,7 +40,7 @@ const CartWrapper = styled.div`
   cursor: pointer;
 `;
 
-function Header() {
+function Header({ cart }: { cart: Product[] }) {
   const [cartOpen, setCartOpen] = useState(false);
 
   const toogle = () => {
@@ -51,7 +56,7 @@ function Header() {
       </ButtonWrapper>
 
       <CartWrapper>
-        <Cart isOpen={cartOpen} toggle={toogle} cart={[]} />
+        <Cart isOpen={cartOpen} toggle={toogle} cart={cart} />
         {/* Lägg till Cart-komponenten här */}
         <CartIcon onClick={toogle} className="material-symbols-outlined">
           shopping_cart

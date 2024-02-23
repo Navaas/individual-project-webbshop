@@ -55,7 +55,7 @@ const CartContent = styled.div`
 `;
 
 const Title = styled.li`
-  color: white;
+  color: black;
 `;
 
 function Cart({ isOpen, toggle, cart }: CartProps) {
