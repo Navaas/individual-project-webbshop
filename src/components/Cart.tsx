@@ -48,14 +48,42 @@ const CartContainer = styled.div<CartContainerProps>`
 const CartContent = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   height: 100%;
   color: black;
+  padding: 10px;
 `;
 
-const Title = styled.li`
-  color: black;
+const ProductContainer = styled.div`
+  grid-gap: 20px;
+  list-style: none;
+`;
+
+// Definiera en komponent för varje produkt
+const ProductItem = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  margin-bottom: 5px;
+`;
+
+// Definiera en komponent för bilderna
+const CartImage = styled.img`
+  width: 75%;
+  max-width: 200px;
+`;
+
+const Item = styled.div`
+  width: 200px;
+  margin-top: 5px;
+  text-align: center;
+`;
+
+const InputField = styled.input`
+  width: 40px;
+  margin-right: 10px;
+  text-align: center;
 `;
 
 function Cart({ isOpen, toggle, cart }: CartProps) {
@@ -64,15 +92,26 @@ function Cart({ isOpen, toggle, cart }: CartProps) {
       <Overlay isOpen={isOpen} onClick={toggle} />
       <CartContainer isOpen={isOpen}>
         <CartContent>
-          <h1>Cart</h1>
-          <ul>
-            {cart &&
-              cart.map((product, index) => (
-                <Title key={product.id}>
-                  {product.title} {product.price}
-                </Title>
-              ))}
-          </ul>
+          <p>Dina varor:</p>
+          <ProductContainer>
+            {cart.map((product) => (
+              <ProductItem key={product.id}>
+                <Item>
+                  <CartImage src={product.image} alt={product.title} />
+                </Item>
+                <Item>
+                  {product.title}
+                  <div>
+                    <InputField type="number" min="1" />
+                  </div>
+                </Item>
+                <Item>{product.price} Kr</Item>
+                <div>
+                  <span className="material-symbols-outlined">delete</span>
+                </div>
+              </ProductItem>
+            ))}
+          </ProductContainer>
         </CartContent>
       </CartContainer>
     </>
