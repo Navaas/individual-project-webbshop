@@ -43,6 +43,9 @@ const CartContainer = styled.div<CartContainerProps>`
   transition: right 0.3s ease-in-out;
   z-index: 999;
   color: white;
+  @media (max-width: 480px) {
+    width: 300px;
+  }
 `;
 
 const CartContent = styled.div`
@@ -50,7 +53,7 @@ const CartContent = styled.div`
   flex-direction: column;
   height: 100%;
   color: black;
-  padding: 10px;
+  padding: 15px;
 `;
 
 const ProductContainer = styled.div`
@@ -64,8 +67,9 @@ const ProductItem = styled.div`
   grid-template-columns: repeat(3, 1fr);
   display: flex;
   align-items: center;
-  border: 1px solid black;
-  margin-bottom: 5px;
+  border: 1px solid grey;
+  margin-bottom: 15px;
+  border-radius: 5px;
 `;
 
 // Definiera en komponent för bilderna
@@ -86,14 +90,19 @@ const InputField = styled.input`
   text-align: center;
 `;
 
+const DeleteIcon = styled.span`
+  padding: 5px;
+  cursor: pointer;
+`;
+
 function Cart({ isOpen, toggle, cart }: CartProps) {
   return (
     <>
       <Overlay isOpen={isOpen} onClick={toggle} />
       <CartContainer isOpen={isOpen}>
         <CartContent>
-          <p>Dina varor:</p>
           <ProductContainer>
+            <p>Dina varor</p>
             {cart.map((product) => (
               <ProductItem key={product.id}>
                 <Item>
@@ -107,10 +116,14 @@ function Cart({ isOpen, toggle, cart }: CartProps) {
                 </Item>
                 <Item>{product.price} Kr</Item>
                 <div>
-                  <span className="material-symbols-outlined">delete</span>
+                  <DeleteIcon className="material-symbols-outlined">
+                    delete
+                  </DeleteIcon>
                 </div>
               </ProductItem>
             ))}
+            {/* En turnery. Är varukorgen tom visas "Här var det tomt" annars visas "Total summa" */}
+            {cart.length > 0 ? <p>Total summa:</p> : <p>Här var det tomt</p>}
           </ProductContainer>
         </CartContent>
       </CartContainer>
