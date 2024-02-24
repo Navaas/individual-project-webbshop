@@ -17,7 +17,7 @@ function Footer() {
   return (
     <FooterContainer>
       <div>
-        <p style={{ margin: 0 }}>Copyright by: Michaela Andreasson</p>
+        <p style={{ margin: 0 }}>Copyright by: Michaela Andreasson hejhej</p>
       </div>
     </FooterContainer>
   );
