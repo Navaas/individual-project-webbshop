@@ -43,6 +43,7 @@ const CartContainer = styled.div<CartContainerProps>`
   transition: right 0.3s ease-in-out;
   z-index: 999;
   color: white;
+  overflow-y: auto;
   @media (max-width: 480px) {
     width: 300px;
   }
@@ -102,7 +103,6 @@ function Cart({ isOpen, toggle, cart }: CartProps) {
       <CartContainer isOpen={isOpen}>
         <CartContent>
           <ProductContainer>
-            <p>Dina varor</p>
             {cart.map((product) => (
               <ProductItem key={product.id}>
                 <Item>
