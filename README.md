@@ -1,30 +1,22 @@
-# React + TypeScript + Vite
+# Inlämning React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Uppgiftsbeskrivning
 
-Currently, two official plugins are available:
+Uppgiften är att skapa en webb-app med React och Typescript. Vad den ska innehålla är frivilligt men den måste innehålla minst 6 komponenter varav 2 skall vara "statefulla"- komponenter. Användning av GIT och GitHub.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Vad har jag valt?
 
-## Expanding the ESLint configuration
+Jag har valt att skapa ett enkelt "skal" för en webbshop som på sikt kan byggas ut. Den innehåller en homePage, productPage, productDetailsPage, likeButton, buybutton, cart, footer, header samt några extra komponenter. Den kommer innehålla mockad data samt funktionaliteten för att lägga en produkt till varukorgen.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Uppgiften innehåller
 
-- Configure the top-level `parserOptions` property like this:
+- npm init vite@latest / npm create vite@latest
+- React och Typescript
+- npm install styled-components
+- npm install react-router-dom
+- RemixIcons
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+### Starta projektet
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- npm install
+- npm run dev
