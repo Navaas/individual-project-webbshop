@@ -1,15 +1,11 @@
 import styled from "styled-components";
+import type { Product } from "../data/mockedData";
 import BuyButton from "./BuyButton";
 import LikeButton from "./LikeButton";
 
 /* Interface berättar hur en produkt ser ut. */
-interface ProductProps {
-  product: {
-    title: string;
-    price: number;
-    image: string;
-    description: string;
-  };
+interface Props {
+  product: Product;
 }
 
 const Container = styled.div`
@@ -90,7 +86,7 @@ const LikeAndBuyDiv = styled.div`
   padding: 10px;
 `;
 
-function ProductView(props: ProductProps) {
+function ProductView(props: Props) {
   /* Sätter title, price och image till en variabel */
   const { title, price, image, description } = props.product;
 
@@ -113,7 +109,7 @@ function ProductView(props: ProductProps) {
           {/* Med variabel */}
           <LikeAndBuyDiv>
             <LikeButton />
-            <BuyButton />
+            <BuyButton product={props.product} />
           </LikeAndBuyDiv>
         </SingleProduct>
       </Product>

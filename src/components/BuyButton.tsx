@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { Dispatch, SetStateAction } from "react";
+import { useOutletContext } from "react-router-dom";
 import styled from "styled-components";
 import { Product } from "../data/mockedData";
 
@@ -13,20 +14,18 @@ const Button = styled.button`
   }
 `;
 
-function BuyButton() {
-  const [cart, setCart] = useState<Product[]>([]);
+interface Props {
+  product: Product;
+}
+
+function BuyButton(props: Props) {
+  const setCart = useOutletContext<Dispatch<SetStateAction<Product[]>>>();
 
   const addToCart = (product: Product) => {
-    console.log("Cart before adding product:", cart);
-    setCart([...cart, product]);
-    console.log("Cart after adding product:", cart);
+    setCart((cart) => [...cart, product]);
   };
 
-  return (
-    <div>
-      <Button onClick={() => addToCart(product)}>Köp</Button>
-    </div>
-  );
+  return <Button onClick={() => addToCart(props.product)}>Köp</Button>;
 }
 
 export default BuyButton;

@@ -1,6 +1,6 @@
-import { Dispatch, SetStateAction } from "react";
-import { Link, useOutletContext, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
+import BuyButton from "../components/BuyButton";
 import LikeButton from "../components/LikeButton";
 import ProductView from "../components/ProductView";
 import { Product, mockedProducts } from "../data/mockedData";
@@ -61,17 +61,6 @@ const LikeAndBuyButtonContainer = styled.div`
   padding: 10px;
 `;
 
-const BuyButton = styled.button`
-  width: 100px;
-  background: #f1edea;
-  color: black;
-  border: 1px solid grey;
-  border-radius: 5px;
-  &:hover {
-    background-color: lightgrey;
-  }
-`;
-
 const TitleAndPrice = styled.p`
   margin: 0;
 `;
@@ -81,12 +70,6 @@ function ProductPage() {
   const product = mockedProducts.find((product) => product.id === params.id) as
     | Product
     | undefined;
-
-  const setCart = useOutletContext<Dispatch<SetStateAction<Product[]>>>();
-
-  const addToCart = (product: Product) => {
-    setCart((cart) => [...cart, product]);
-  };
 
   if (!product) {
     return (
@@ -101,7 +84,7 @@ function ProductPage() {
               </Link>
               <LikeAndBuyButtonContainer>
                 <LikeButton />
-                <BuyButton onClick={() => addToCart(product)}>Köp</BuyButton>
+                <BuyButton product={product} />
               </LikeAndBuyButtonContainer>
             </ProductCard>
           ))}
