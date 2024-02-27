@@ -2,8 +2,8 @@ import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 import BuyButton from "../components/BuyButton";
 import LikeButton from "../components/LikeButton";
-import ProductView from "../components/ProductView";
 import { Product, mockedProducts } from "../data/mockedData";
+import ProductView from "./ProductDetailsPage";
 
 const Container = styled.div`
   background: #f1edea;

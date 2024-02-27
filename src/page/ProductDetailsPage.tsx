@@ -1,7 +1,7 @@
 import styled from "styled-components";
+import BuyButton from "../components/BuyButton";
+import LikeButton from "../components/LikeButton";
 import type { Product } from "../data/mockedData";
-import BuyButton from "./BuyButton";
-import LikeButton from "./LikeButton";
 
 /* Interface berättar hur en produkt ser ut. */
 interface Props {
@@ -91,7 +91,7 @@ function ProductView(props: Props) {
   /* Sätter title, price och image till en variabel */
   const { title, price, image, description } = props.product;
 
-  /* TVÅ OLIKA SÄTT ATT FÅ UT PRODUKTEN */
+  /* TVÅ OLIKA SÄTT ATT FÅ UT PRODUKTEN. */
   /* Använd antingen props.product.image */
   /* Bara {title}, {price} {image} */
 
