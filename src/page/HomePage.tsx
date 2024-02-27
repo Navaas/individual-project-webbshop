@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
-import image1 from "../image/image.png";
 
 const Container = styled.div`
   background: #f1edea;
@@ -158,7 +157,10 @@ function Homepage() {
           </div>
         </Text>
         <Image>
-          <StyledImageHomeSide src={image1} alt="" />
+          <StyledImageHomeSide
+            src="https://images.desenio.com/zoom/INSP10833_1.jpg?_gl=1*1s1la50*_ga*ODY4MDk3NTgwLjE3MDg2MDY1NDE.*_ga_GH3FS7X5TH*MTcwOTAzMzc2OS43LjEuMTcwOTAzNDg4MS4wLjAuMA.."
+            alt=""
+          />
         </Image>
       </TextContainer>
 
@@ -166,7 +168,7 @@ function Homepage() {
         <ProductImage>
           <p>
             <StyledImage
-              src="https://images.desenio.com/zoom/2562_2-23931.jpg?_gl=1*4esxnv*_ga*ODY4MDk3NTgwLjE3MDg2MDY1NDE.*_ga_GH3FS7X5TH*MTcwODYwNjU0MS4xLjEuMTcwODYwODM1My4wLjAuMA.."
+              src="https://images.desenio.com/zoom/18826_1.jpg?_gl=1*10017sm*_ga*ODY4MDk3NTgwLjE3MDg2MDY1NDE.*_ga_GH3FS7X5TH*MTcwOTAzMzc2OS43LjEuMTcwOTAzNDQxNi4wLjAuMA.."
               alt="My Image"
             />
           </p>
@@ -179,7 +181,7 @@ function Homepage() {
         <ProductImage>
           <p>
             <StyledImage
-              src="https://images.desenio.com/zoom/2562_2-23931.jpg?_gl=1*4esxnv*_ga*ODY4MDk3NTgwLjE3MDg2MDY1NDE.*_ga_GH3FS7X5TH*MTcwODYwNjU0MS4xLjEuMTcwODYwODM1My4wLjAuMA.."
+              src="https://images.desenio.com/zoom/10675_2-67473.jpg?_gl=1*1bpghiz*_ga*ODY4MDk3NTgwLjE3MDg2MDY1NDE.*_ga_GH3FS7X5TH*MTcwOTAzMzc2OS43LjEuMTcwOTAzNDU4NC4wLjAuMA.."
               alt="My Image"
             />
           </p>
@@ -192,7 +194,7 @@ function Homepage() {
         <ProductImage>
           <p>
             <StyledImage
-              src="https://images.desenio.com/zoom/2562_2-23931.jpg?_gl=1*4esxnv*_ga*ODY4MDk3NTgwLjE3MDg2MDY1NDE.*_ga_GH3FS7X5TH*MTcwODYwNjU0MS4xLjEuMTcwODYwODM1My4wLjAuMA.."
+              src="https://images.desenio.com/zoom/co0073_2.jpg?_gl=1*vnhcwy*_ga*ODY4MDk3NTgwLjE3MDg2MDY1NDE.*_ga_GH3FS7X5TH*MTcwOTAzMzc2OS43LjEuMTcwOTAzNDc1Ny4wLjAuMA.."
               alt="My Image"
             />
           </p>
