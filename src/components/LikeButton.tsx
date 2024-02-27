@@ -1,14 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function LikeButton() {
-  const [liked, setLiked] = useState(() => {
-    const saveToLocalStorage = localStorage.getItem("liked");
-    return saveToLocalStorage ? JSON.parse(saveToLocalStorage) : false;
-  });
-
-  useEffect(() => {
-    localStorage.setItem("liked", JSON.stringify(liked));
-  }, [liked]);
+  const [liked, setLiked] = useState(false);
 
   const toggleLiked = () => {
     setLiked(!liked);

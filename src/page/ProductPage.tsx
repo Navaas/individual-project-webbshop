@@ -42,6 +42,7 @@ const ProductCard = styled.div`
   width: 25vh;
   height: 35vh;
   text-align: center;
+
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
   @media (max-width: 480px) {
     width: 35vh;
