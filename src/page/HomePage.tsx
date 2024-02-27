@@ -155,7 +155,9 @@ function Homepage() {
             för att uttrycka din unika personlighet och lyfta din heminredning."
           </p>
           <div>
-            <ProductButton>Shoppa nu</ProductButton>
+            <Link to="/ProductPage">
+              <ProductButton>Shoppa nu</ProductButton>
+            </Link>
           </div>
         </Text>
         <Image>
