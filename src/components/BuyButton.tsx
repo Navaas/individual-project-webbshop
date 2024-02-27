@@ -16,10 +16,18 @@ const Button = styled.button`
   }
 `;
 
+/**
+ * @param {Object} props - Properties of the component.
+ * @param {Product} props.product - The product to be added to the shopping cart when the button is clicked.
+ */
 interface Props {
   product: Product;
 }
 
+/**
+ * Add added to the shopping cart when the button is clicked.
+ * @param {Product} product
+ */
 function BuyButton(props: Props) {
   const setCart = useOutletContext<Dispatch<SetStateAction<Product[]>>>();
 

@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+/**
+ * isopen: Is cart open or close. true or false.
+ * toggle: Its a function to see if the cart is open or close.
+ * cart: An array containing the products that are in the shopping cart.
+ */
+
 interface CartProps {
   isOpen: boolean;
   toggle: () => void;
@@ -10,6 +16,9 @@ interface CartContainerProps {
   isOpen: boolean;
 }
 
+/**
+ * This interface describes the structure of a product.
+ */
 interface Product {
   id: string;
   title: string;
@@ -62,7 +71,6 @@ const ProductContainer = styled.div`
   list-style: none;
 `;
 
-// Definiera en komponent för varje produkt
 const ProductItem = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -73,7 +81,6 @@ const ProductItem = styled.div`
   border-radius: 5px;
 `;
 
-// Definiera en komponent för bilderna
 const CartImage = styled.img`
   width: 75%;
   max-width: 200px;

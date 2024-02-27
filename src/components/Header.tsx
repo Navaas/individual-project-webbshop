@@ -52,18 +52,21 @@ function Header({ cart }: { cart: Product[] }) {
 
   return (
     <HeaderDiv>
+      {/* Hemknappen */}
       <ButtonWrapper>
         <Link to="/">
           <Button>Hem</Button>
         </Link>
       </ButtonWrapper>
+      {/* Navigationbar */}
       <NavigationBar />
+      {/* Kundvagn */}
       <CartWrapper>
         <Cart isOpen={cartOpen} toggle={toogle} cart={cart} />
-        {/* Lägg till Cart-komponenten här */}
         <CartIcon onClick={toogle} className="material-symbols-outlined">
           shopping_cart
         </CartIcon>
+        {/* HamburgerMenu */}
         <HamburgerMenu />
       </CartWrapper>
     </HeaderDiv>

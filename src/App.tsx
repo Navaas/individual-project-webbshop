@@ -6,7 +6,7 @@ import { Product } from "./data/mockedData";
 
 function App() {
   const [cart, setCart] = useState<Product[]>([]);
-  console.log(cart);
+  // console.log(cart);
 
   return (
     <div>

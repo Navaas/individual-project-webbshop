@@ -14,7 +14,7 @@ const Overlay = styled.div<{ isOpen: boolean }>`
   cursor: default;
 `;
 
-const CartContainer = styled.div<{ isOpen: boolean }>`
+const HamburgerContainer = styled.div<{ isOpen: boolean }>`
   position: fixed;
   top: 0;
   right: ${({ isOpen }) => (isOpen ? "0" : "-350px")};
@@ -77,14 +77,14 @@ function HamburgerMenu() {
         </Icon>
       </HamburgerMenuIcon>
       <Overlay isOpen={isOpen} onClick={() => setIsOpen(false)} />
-      <CartContainer isOpen={isOpen}>
+      <HamburgerContainer isOpen={isOpen}>
         <Ul>
           <ListMobile>Nyheter</ListMobile>
           <ListMobile>Posters</ListMobile>
           <ListMobile>Canvas</ListMobile>
           <ListMobile>Topplistan</ListMobile>
         </Ul>
-      </CartContainer>
+      </HamburgerContainer>
     </div>
   );
 }

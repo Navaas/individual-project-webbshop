@@ -32,7 +32,6 @@ const TextContainer = styled.div`
 `;
 
 const Text = styled.div`
-  /* border: solid 1px black; */
   width: 100%;
   margin-top: 30px;
   left: 0;
@@ -51,7 +50,6 @@ const Text = styled.div`
 `;
 
 const Image = styled.div`
-  /* border: solid 1px red; */
   width: 100%;
   @media (max-width: 768px) {
     margin-top: 50px;
@@ -68,8 +66,8 @@ const StyledImage = styled.img`
   border-top-right-radius: 999px;
   transition: filter 0.5s ease;
   &:hover {
-    opacity: 0.5; /* Ändra opacity till 0.5 vid hover */
-    transform: scale(1.1); /* Skala upp bilden till 110% av sin storlek */
+    opacity: 0.5;
+    transform: scale(1.1);
   }
 
   @media (max-width: 768px) {
@@ -100,7 +98,7 @@ const StyledImageHomeSide = styled.img`
   `} 2s ease forwards;
 
   &:hover {
-    opacity: 0.5 !important; /* Här är din hover-effekt */
+    opacity: 0.5 !important;
   }
 `;
 

@@ -13,14 +13,10 @@ const FooterContainer = styled.div`
   align-content: center;
   z-index: 999;
   @media (max-width: 768px) {
-    /* grid-template-columns: repeat(2, 1fr); */
   }
 
   @media (max-width: 480px) {
-    grid-template-columns: repeat(
-      1,
-      1fr
-    ); /* Vid mycket små skärmar, en kolumn */
+    grid-template-columns: repeat(1, 1fr);
   }
 `;
 

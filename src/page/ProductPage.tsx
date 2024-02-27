@@ -22,17 +22,14 @@ const ProductContainer = styled.div`
   align-items: center;
   gap: 40px;
   max-width: 1000px;
-  margin: 0 auto; /* Centrera behållaren på sidan */
+  margin: 0 auto;
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
   }
 
   @media (max-width: 480px) {
-    grid-template-columns: repeat(
-      1,
-      1fr
-    ); /* Vid mycket små skärmar, en kolumn */
+    grid-template-columns: repeat(1, 1fr);
   }
 `;
 
@@ -76,13 +73,15 @@ function ProductPage() {
     return (
       <Container>
         <ProductContainer>
+          {/* Här mappas alla produkter ut. */}
           {mockedProducts.map((product) => (
             <ProductCard key={product.id}>
               <Link to={"/products/" + product.id}>
-                <ProductImage src={product.image} alt="productimage" />
+                <ProductImage src={product.image} alt="productImage" />
                 <TitleAndPrice>{product.title}</TitleAndPrice>
                 <TitleAndPrice>{product.price} :-</TitleAndPrice>
               </Link>
+              {/* Här hämtas LikeButton och Buyutton */}
               <LikeAndBuyButtonContainer>
                 <LikeButton />
                 <BuyButton product={product} />
