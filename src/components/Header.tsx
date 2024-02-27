@@ -23,9 +23,16 @@ const ButtonWrapper = styled.div`
 `;
 
 const Button = styled.button`
-  background: black;
+  background: #ede4dd;
   color: white;
-  width: 100px;
+  width: 60px;
+  height: 60px;
+  border-radius: 9999px;
+  border: solid grey 1px;
+  font-size: 30px;
+  &:hover {
+    background: #dcc6b8;
+  }
 `;
 
 const CartIcon = styled.span`
@@ -55,7 +62,7 @@ function Header({ cart }: { cart: Product[] }) {
       {/* Hemknappen */}
       <ButtonWrapper>
         <Link to="/">
-          <Button>Hem</Button>
+          <Button>🏠</Button>
         </Link>
       </ButtonWrapper>
       {/* Navigationbar */}
