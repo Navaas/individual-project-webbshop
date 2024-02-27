@@ -60,6 +60,7 @@ const LikeAndBuyButtonContainer = styled.div`
 `;
 
 const TitleAndPrice = styled.p`
+  font-family: "Quicksand", sans-serif;
   margin: 0;
 `;
 

@@ -32,6 +32,7 @@ const TextContainer = styled.div`
 
 const Text = styled.div`
   width: 100%;
+  font-family: "Quicksand", sans-serif;
   margin-top: 30px;
   left: 0;
   transform: translate(-100%, -50%);
@@ -102,6 +103,7 @@ const StyledImageHomeSide = styled.img`
 `;
 
 const ProductButton = styled.button`
+  font-family: "Quicksand", sans-serif;
   background: #ede4dd;
   width: 150px;
   padding: 10px;

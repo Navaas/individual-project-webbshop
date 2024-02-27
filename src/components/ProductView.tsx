@@ -10,6 +10,7 @@ interface Props {
 
 const Container = styled.div`
   background: #f1edea;
+  font-family: "Quicksand", sans-serif;
   display: flex;
   justify-content: center;
   padding: 30px;

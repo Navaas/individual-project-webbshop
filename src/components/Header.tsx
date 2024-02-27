@@ -11,6 +11,7 @@ interface CartProps {
 }
 
 const HeaderDiv = styled.header`
+  font-family: "Quicksand", sans-serif;
   background: #ede4dd;
   display: flex;
   justify-content: space-between;

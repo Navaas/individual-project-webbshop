@@ -7,6 +7,7 @@ const Button = styled.button`
   background: #ede4dd;
   width: 70px;
   padding: 5px;
+  font-family: "Quicksand", sans-serif;
   border: 1px solid grey;
   border-radius: 5px;
   text-transform: uppercase;

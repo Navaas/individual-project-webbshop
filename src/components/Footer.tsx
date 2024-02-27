@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const FooterContainer = styled.div`
   background: #ede4dd;
+  font-family: "Quicksand", sans-serif;
   color: black;
   bottom: 0;
   display: grid;
