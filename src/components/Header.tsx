@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Product } from "../data/mockedData";
 import Cart from "./Cart";
+import NavigationBar from "./NavigationBar";
 
 interface CartProps {
   cart: Product[];
@@ -54,7 +55,7 @@ function Header({ cart }: { cart: Product[] }) {
           <Button>Hem</Button>
         </Link>
       </ButtonWrapper>
-
+      <NavigationBar />
       <CartWrapper>
         <Cart isOpen={cartOpen} toggle={toogle} cart={cart} />
         {/* Lägg till Cart-komponenten här */}
