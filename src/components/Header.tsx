@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Product } from "../data/mockedData";
 import Cart from "./Cart";
+import HamburgerMenu from "./HamburgerMenu";
 import NavigationBar from "./NavigationBar";
 
 interface CartProps {
@@ -38,6 +39,7 @@ const CartWrapper = styled.div`
   display: flex;
   align-items: center;
   padding: 20px;
+  gap: 20px;
   cursor: pointer;
 `;
 
@@ -62,6 +64,7 @@ function Header({ cart }: { cart: Product[] }) {
         <CartIcon onClick={toogle} className="material-symbols-outlined">
           shopping_cart
         </CartIcon>
+        <HamburgerMenu />
       </CartWrapper>
     </HeaderDiv>
   );
