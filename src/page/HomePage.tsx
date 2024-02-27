@@ -8,10 +8,10 @@ const Container = styled.div`
   flex-direction: column;
   height: 120vh;
   @media (max-width: 768px) {
-    height: 155vh;
+    height: 170vh;
   }
   @media (max-width: 480px) {
-    height: 200vh;
+    height: 230vh;
   }
 `;
 

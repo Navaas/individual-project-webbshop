@@ -43,7 +43,7 @@ const ProductCard = styled.div`
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
   @media (max-width: 480px) {
     width: 35vh;
-    height: 40vh;
+    height: 50vh;
   }
 `;
 
