@@ -89,7 +89,7 @@ const LikeAndBuyDiv = styled.div`
 
 function ProductView(props: Props) {
   /* Sätter title, price och image till en variabel */
-  const { title, price, image, description } = props.product;
+  const { price, description } = props.product;
 
   /* TVÅ OLIKA SÄTT ATT FÅ UT PRODUKTEN. */
   /* Använd antingen props.product.image */
