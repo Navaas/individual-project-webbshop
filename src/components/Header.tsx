@@ -6,10 +6,6 @@ import Cart from "./Cart";
 import HamburgerMenu from "./HamburgerMenu";
 import NavigationBar from "./NavigationBar";
 
-interface CartProps {
-  cart: Product[];
-}
-
 const HeaderDiv = styled.header`
   font-family: "Quicksand", sans-serif;
   background: #ede4dd;
