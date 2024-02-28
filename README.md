@@ -20,3 +20,7 @@ Jag har valt att skapa ett enkelt "skal" för en webbshop som på sikt kan bygga
 
 - npm install
 - npm run dev
+
+### Demo-länk
+
+[Webbshop-demo](https://webbshop-demo.netlify.app/)
