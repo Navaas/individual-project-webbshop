@@ -14,7 +14,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   padding: 30px;
-  height: 100vh;
+  height: 110vh;
   @media (max-width: 768px) {
     height: 80vh;
   }
@@ -27,7 +27,7 @@ const Product = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 120vh;
   @media (max-width: 768px) {
     height: 70vh;
     margin-top: 50px;
@@ -42,7 +42,7 @@ const SingleProduct = styled.div`
   background: white;
   border-radius: 10px;
   width: 75vh;
-  height: 90vh;
+  height: 100vh;
   text-align: center;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
   @media (max-width: 768px) {
